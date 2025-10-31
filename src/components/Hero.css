@@ -1,0 +1,142 @@
+/* Global Variables */
+:root {
+  --dark: #2e2e2e;
+  --light: #f2f2f2;
+}
+
+/* Hero Component Styles */
+.hero {
+  background-color: var(--light);
+  height: 100vh;
+  width: 100%;
+  padding: 1vh 2vw;
+}
+
+.heading {
+  height: 18%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading h1 {
+  font-size: 6.5vw;
+  line-height: 1;
+  background-color: blanchedalmond;
+  font-family: "Phudu", sans-serif;
+  margin: 0;
+}
+
+.bottom-section {
+  height: 82%;
+  width: 100%;
+  display: flex;
+  padding-top: 1vh;
+}
+
+.first {
+  height: 100%;
+  width: 20%;
+  font-size: larger;
+}
+
+.second {
+  height: 100%;
+  width: 50%;
+  padding-right: 1.5vw;
+  color: var(--dark);
+  display: flex;
+  font-size: medium;
+}
+
+.tech-stack {
+  height: 100%;
+  width: 30%;
+}
+
+.tech-stack .title h3 {
+  font-size: x-large;
+  font-family: "Phudu", sans-serif;
+  margin: 0 0 1rem 0;
+}
+
+.tech-stack .list {
+  font-size: large;
+  margin-top: 1vw;
+}
+
+.tech-stack .list h4 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+.about {
+  height: 100%;
+  width: 70%;
+  padding-left: 2vw;
+}
+
+.about .title h3 {
+  font-size: x-large;
+  font-family: "Phudu", sans-serif;
+  margin: 0 0 1rem 0;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1vw 0 0 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.third {
+  height: 100%;
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 10px var(--dark);
+  background: none;
+  padding: 0;
+}
+
+.third img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.6s ease;
+  display: block;
+}
+
+.third:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px var(--dark), 0 0 35px var(--dark);
+}
+
+.third:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Text Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Phudu", sans-serif;
+  color: var(--dark);
+}
+
+span {
+  font-family: "Instrument Serif", serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}

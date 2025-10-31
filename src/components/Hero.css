@@ -4,12 +4,36 @@
   --light: #f2f2f2;
 }
 
-/* Hero Component Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h3 {
+  font-family: "Phudu", sans-serif;
+}
+
+span {
+  font-family: "Instrument Serif", serif;
+  text-transform: uppercase;
+}
+
+p,
+h2,
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/* Base Styles */
 .hero {
   background-color: var(--light);
   height: 100vh;
   width: 100%;
   padding: 1vh 2vw;
+  overflow: hidden;
 }
 
 .heading {
@@ -18,125 +42,234 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .heading h1 {
   font-size: 6.5vw;
   line-height: 1;
   background-color: blanchedalmond;
-  font-family: "Phudu", sans-serif;
-  margin: 0;
+  margin: 0.2em 0;
 }
 
 .bottom-section {
-  height: 82%;
+  height: 75%;
   width: 100%;
   display: flex;
-  padding-top: 1vh;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .first {
-  height: 100%;
-  width: 20%;
-  font-size: larger;
+  width: 100%;
+  text-align: center;
+}
+
+.first h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
 }
 
 .second {
-  height: 100%;
-  width: 50%;
-  padding-right: 1.5vw;
-  color: var(--dark);
+  width: 100%;
   display: flex;
-  font-size: medium;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .tech-stack {
-  height: 100%;
-  width: 30%;
+  width: 100%;
 }
 
 .tech-stack .title h3 {
   font-size: x-large;
-  font-family: "Phudu", sans-serif;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .tech-stack .list {
-  font-size: large;
-  margin-top: 1vw;
+  margin-top: 1rem;
 }
 
 .tech-stack .list h4 {
   font-size: 1rem;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
   margin: 0.5rem 0;
 }
 
 .about {
-  height: 100%;
-  width: 70%;
-  padding-left: 2vw;
+  width: 100%;
 }
 
 .about .title h3 {
   font-size: x-large;
-  font-family: "Phudu", sans-serif;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .about p {
   font-size: 1rem;
   line-height: 1.6;
-  margin: 1vw 0 0 0;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  margin: 1rem 0 0 0;
 }
 
 .third {
-  height: 100%;
-  width: 30%;
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  transition: all 0.4s ease-in-out;
   box-shadow: 0 0 10px var(--dark);
-  background: none;
-  padding: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .third img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 20px;
   transition: all 0.6s ease;
-  display: block;
 }
 
-.third:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 15px var(--dark), 0 0 35px var(--dark);
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  .heading {
+    flex-direction: row;
+    text-align: left;
+    height: 15%;
+  }
+  
+  .bottom-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 82%;
+  }
+  
+  .first {
+    width: 30%;
+    text-align: left;
+  }
+  
+  .second {
+    width: 65%;
+    flex-direction: row;
+  }
+  
+  .tech-stack {
+    width: 35%;
+  }
+  
+  .about {
+    width: 60%;
+    padding-left: 2rem;
+  }
+  
+  .third {
+    width: 100%;
+    max-width: none;
+    height: 40%;
+  }
 }
 
-.third:hover img {
-  transform: scale(1.1);
-  filter: brightness(1.1);
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .hero {
+    padding: 1vh 5vw;
+  }
+  
+  .heading h1 {
+    font-size: 5vw;
+  }
+  
+  .bottom-section {
+    flex-wrap: nowrap;
+    height: 80%;
+  }
+  
+  .first {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .second {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    padding-right: 2rem;
+  }
+  
+  .tech-stack {
+    width: 100%;
+    height: 30%;
+  }
+  
+  .about {
+    width: 100%;
+    height: 65%;
+    padding-left: 0;
+  }
+  
+  .third {
+    width: 30%;
+    height: 100%;
+    max-height: 100%;
+  }
+  
+  /* Hover Effects */
+  .third:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px var(--dark), 0 0 35px var(--dark);
+  }
+  
+  .third:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+  }
 }
 
-/* Text Styles */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Phudu", sans-serif;
-  color: var(--dark);
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  .hero {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .about p {
+    font-size: 1.1rem;
+  }
 }
 
-span {
-  font-family: "Instrument Serif", serif;
-  text-transform: uppercase;
-}
-
-p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+/* Landscape Mode for Mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    padding: 1vh 2vw;
+  }
+  
+  .heading {
+    height: 20%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bottom-section {
+    height: 75%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .first, 
+  .second {
+    width: 48%;
+    height: 100%;
+  }
+  
+  .third {
+    width: 48%;
+    height: 100%;
+    margin: 0;
+  }
 }
